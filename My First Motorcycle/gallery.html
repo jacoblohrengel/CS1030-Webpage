@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Gallery — My First Motorcycle</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="site-header hero-galleryhero">
+		<div class="container">
+			<div class="heading-box">
+				<h1>Gallery</h1>
+				<p class="tagline">Photos from day one and more</p>
+			</div>
+		</div>
+	</header>
+
+	<main class="container">
+		<!-- Featured current photo -->
+		<figure>
+			<img src="images/current.jpg" alt="Current picture of the bike" class="large-photo">
+			<figcaption>
+				<strong>Current picture</strong>
+				<p class="muted">This is a recent picture of my bike, showing how it looks now. As it was my first, it got a little banged up, tach gauge got water in it so it had to be removed, but I still love it!</p>
+			</figcaption>
+		</figure>
+
+		<section class="grid">
+		    <figure class="card">
+			<img src="images/firstpic.jpg" alt="First picture of the bike">
+			<figcaption>
+				<strong>First picture</strong>
+				<p class="muted">This was the very first picture I took of my bike as I was waiting for the dealership to open to test ride it, I couldn't wait!</p>
+			</figcaption>
+		</figure>
+		<figure class="card">
+			<img src="images/firstday.jpg" alt="First day with the bike">
+			<figcaption>
+				<strong>First day</strong>
+				<p class="muted">This was the first picture after I bought the bike! I was so happy and excited!!</p>
+			</figcaption>
+		</figure>
+
+		</section>
+	</main>
+
+	<footer class="container">
+		<p><a href="index.html">← Back to Home</a></p>
+		<p>&copy; <span id="year"></span> Jacob Lohrengel.</p>
+	</footer>
+
+	<script>
+		// Small script to keep the footer year current
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+
+</html>
+
