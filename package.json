@@ -1,0 +1,8 @@
+{
+  "name": "cs1030-website",
+  "version": "1.0.0",
+  "description": "A basic website deployment.",
+  "scripts": {
+    "build": "echo 'No build step required'"
+  }
+}
