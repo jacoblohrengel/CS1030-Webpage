@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Robot — Conditionals Practice</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Interactive Robot</h1>
+    <!-- Robot + Speech Bubble -->
+    <figure class="bot">
+
+      <!-- Simple inline SVG robot (no image files needed) -->
+      <svg class="robot" viewBox="0 0 120 140" role="img" aria-label="Robot">
+        <!-- Antenna -->
+        <line x1="60" y1="8" x2="60" y2="20" stroke="#6d5dfc" stroke-width="4" />
+        <circle cx="60" cy="6" r="4" fill="#6d5dfc" />
+        <!-- Head -->
+        <rect x="30" y="20" width="60" height="40" rx="8" fill="#e9ebf6" stroke="#cfd2ea"/>
+        <!-- Eyes -->
+        <circle cx="45" cy="38" r="6" fill="#6d5dfc" />
+        <circle cx="75" cy="38" r="6" fill="#6d5dfc" />
+        <!-- Mouth -->
+        <rect x="45" y="50" width="30" height="6" rx="3" fill="#6d5dfc" opacity="0.7"/>
+        <!-- Body -->
+        <rect x="22" y="60" width="76" height="60" rx="10" fill="#ffffff" stroke="#cfd2ea"/>
+        <!-- Chest lights -->
+        <circle cx="42" cy="78" r="6" fill="#6d5dfc"/>
+        <circle cx="60" cy="78" r="6" fill="#ffb54a"/>
+        <circle cx="78" cy="78" r="6" fill="#50c878"/>
+        <!-- Arms -->
+        <rect x="4" y="70" width="18" height="36" rx="8" fill="#e9ebf6" stroke="#cfd2ea"/>
+        <rect x="98" y="70" width="18" height="36" rx="8" fill="#e9ebf6" stroke="#cfd2ea"/>
+        <!-- Legs -->
+        <rect x="38" y="120" width="14" height="16" rx="4" fill="#e9ebf6" stroke="#cfd2ea"/>
+        <rect x="68" y="120" width="14" height="16" rx="4" fill="#e9ebf6" stroke="#cfd2ea"/>
+      </svg>
+      <div class="bubble" id="bubble">Hello, human. Click “Start Robot.”</div>
+    </figure>
+
+    <p class="tagline">
+      Click Start, then make choices. Your robot should respond using if, else if, and else.
+    </p>
+
+    <div class="controls">
+      <button id="startRobot">Start Robot</button>
+    </div>
+
+    <section class="output">
+      <h2>Output</h2>
+      <div id="log" class="log">
+        <p>(Robot messages appear here.)</p>
+      </div>
+    </section>
+
+    <!-- Students: create app.js in the same folder and write your logic there. -->
+    <script defer src="app.js"></script>
+  </main>
+</body>
+</html>

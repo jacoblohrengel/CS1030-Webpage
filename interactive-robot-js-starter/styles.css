@@ -1,0 +1,107 @@
+:root {
+  --bg: #f7f8fb;
+  --ink: #1b1b2b;
+  --muted: #5c5c78;
+  --accent: #6d5dfc;
+  --card: #ffffff;
+  --ring: rgba(109, 93, 252, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #e9ebf6 60%);
+  color: var(--ink);
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: min(800px, 94vw);
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #e7e8f2;
+}
+
+h1 { margin: 0 0 8px; font-size: 1.9rem; }
+.tagline { margin: 0 0 16px; color: var(--muted); }
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0 20px;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #dfe1f0;
+  background: #f2f2ff;
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 80ms ease, border-color 120ms ease;
+}
+button:hover { transform: translateY(-1px); }
+button:focus { outline: 3px solid var(--ring); outline-offset: 2px; }
+
+.output h2 { margin: 12px 0 8px; }
+.log {
+  border: 1px dashed #cfd2ea;
+  border-radius: 12px;
+  padding: 14px;
+  background: #fafbff;
+  min-height: 140px;
+}
+.log p { margin: 8px 0; }
+/* Robot + speech bubble */
+.bot {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin: 8px 0 16px;
+}
+
+.robot {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.05));
+}
+
+.bubble {
+  position: relative;
+  max-width: 60ch;
+  background: #ffffff;
+  border: 1px solid #e2e4f2;
+  border-radius: 14px;
+  padding: 10px 12px;
+  color: var(--ink);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  line-height: 1.25;
+}
+
+/* Little triangle pointer */
+.bubble::after {
+  content: "";
+  position: absolute;
+  left: -10px;            /* points toward the robot */
+  bottom: 16px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-right-color: #ffffff;     /* bubble fill */
+  filter: drop-shadow(-1px 0 0 #e2e4f2); /* edge line */
+}
+
+/* Fun pop animation when text updates */
+@keyframes pop {
+  0%   { transform: scale(0.98); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.bubble.pop {
+  animation: pop 120ms ease-out;
+}
